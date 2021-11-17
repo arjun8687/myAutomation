@@ -24,7 +24,7 @@ public class RepositoryLoader {
     public static void main(String[] args) throws IOException {
         RepositoryLoader loader = new RepositoryLoader();
         loader.loadProperties();
-        System.out.println(loader.getProperties("LoginPage.txtBoxUsername"));
+        //System.out.println(loader.getProperties("LoginPage.txtBoxUsername"));
 
     }
 }

@@ -9,7 +9,7 @@ import java.util.Properties;
 
 public class PropertiesLoader {
 
-    static Properties configProperties;
+    public static Properties configProperties;
 
     public static String runOnBrowser;
     public static Boolean takeScreenshot;
@@ -19,11 +19,12 @@ public class PropertiesLoader {
     public static String fireFoxDriverPath;
     public static Boolean maximizedMode;
     public static Integer implicitWaitTime;
-    public static Integer getExplicitWaitTime;
+    public static Integer explicitWaitTime;
     public static Integer pageloadWaitTime;
     public static Boolean headless;
     public static Boolean deleteCookies;
     public static Boolean remoteRun;
+    public static String appUrl;
 
 
     public static void initializeProperties()throws Exception{
@@ -40,11 +41,12 @@ public class PropertiesLoader {
         fireFoxDriverPath=configProperties.getProperty("FirefoxDriverPath");
         maximizedMode=Boolean.valueOf(configProperties.getProperty("MaximizedMode"));
         implicitWaitTime=Integer.valueOf(configProperties.getProperty("ImplicitWait"));
-        getExplicitWaitTime=Integer.valueOf(configProperties.getProperty("ExplicitWait"));
+        explicitWaitTime=Integer.valueOf(configProperties.getProperty("ExplicitWait"));
         pageloadWaitTime=Integer.valueOf(configProperties.getProperty("PageLoadWait"));
         headless=Boolean.valueOf(configProperties.getProperty("headless"));
         deleteCookies=Boolean.valueOf(configProperties.getProperty("deleteCookies"));
         remoteRun=Boolean.valueOf(configProperties.getProperty("remoteRun"));
+        appUrl=configProperties.getProperty("appUrl");
 
 
 
